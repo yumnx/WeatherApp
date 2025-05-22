@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    overflow: hidden;
+}
+
+.background {
+    background-image: url('img/bg.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    position: relative;
+}
+
+.weather-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    flex: 1;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+}
+
+#searchBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.history {
+    margin-bottom: 30px;
+}
+
+.history h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+#historyList {
+    list-style: none;
+    padding: 0;
+}
+
+#historyList li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    color: #eee;
+    transition: color 0.3s;
+}
+
+#historyList li:hover {
+    color: #90caf9;
+}
+
+.weather-box {
+    margin-top: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.weather-box h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.weather-box p {
+    font-size: 16px;
+    margin: 6px 0;
+}
+
+.top-left-logo {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.weather-box {
+    position: absolute;
+    bottom: 40px;
+    left: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .weather-panel {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .top-left-logo {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .weather-box {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .background {
+        overflow-y: auto;
+    }
+
+    .search-bar {
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    #cityInput {
+        font-size: 14px;
+    }
+
+    #searchBtn {
+        font-size: 16px;
+    }
+}
+
